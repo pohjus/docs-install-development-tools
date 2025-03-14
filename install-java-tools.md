@@ -1,86 +1,112 @@
-# Java Tools (Under Construction)
+# ☕ Java Development Tools Installation Guide
 
-You will need
+Welcome to the **Java Development Tools Installation Guide**! 🚀 This guide will help you install essential tools for Java development, including Java, Kotlin, Gradle, and Maven.
 
-- [Java LTS version](https://adoptium.net/en-GB/)
+---
+
+## ✅ Required Tools
+
+You'll need the following tools installed:
+
+- [Java (LTS version)](https://adoptium.net/en-GB/)
 - [Kotlin](https://kotlinlang.org/docs/command-line.html)
 - [Gradle](https://gradle.org/install/)
 - [Maven](https://maven.apache.org/download.cgi)
 
-The preferred way of installing all of the tools is [SDKMAN!](https://sdkman.io). But this tool works only **on unix-based machines like macOS and Linux.** By using SDKMAN you can install and configure all of these using command line. You can also install multiple versions of these in the same computer.
+The **recommended** way to install all these tools is via **[SDKMAN!](https://sdkman.io)**, which works best on **Unix-based systems (macOS & Linux).** 🐧🍏
+SDKMAN allows easy installation, configuration, and management of multiple versions of these tools via the command line.
 
-Windows options are
+For **Windows**, here are some of the options:
 
 - [Cygwin](https://www.cygwin.com)
-- Windows Subsystem for Linux (install instructions below)
-  - GUI exercises can be complicated in WSL2! 😞
+- **Windows Subsystem for Linux (WSL)**
+  – Install instructions below ⬇️
 
-## macOS installation for sdkman
+💡 _Note:_ GUI-based applications can be challenging in WSL2. 😞
 
-Open terminal and give command:
+---
 
-    curl -s "https://get.sdkman.io" | bash
+## 🍏 Installing SDKMAN on macOS
 
-Reboot your terminal. Now install
+Open **Terminal** and run:
 
-- Java LTS (Temurin)
-- Kotlin
-- Gradle
-- Maven
+```bash
+curl -s "https://get.sdkman.io" | bash
+```
 
-See commands how to install below ⬇️
+Restart your terminal, then install:
 
-## Windows 10+: Subsystem for Linux and sdkman
+```bash
+sdk list java
+sdk install java xx.y.z-tem   # install LTS version from Temurin
+```
 
-You can install [Windows subsystem for linux](https://www.windowscentral.com/install-windows-subsystem-linux-windows-10) and [Ubuntu from the Store](https://www.microsoft.com/en-us/p/ubuntu-2004/9n6svws3rx71?activetab=pivot:overviewtab). You can also install [new terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab) for windows.
-
-Then you can open the new terminal and ubuntu:
-
-![](images/wsl.gif)
-
-Install zip and unzip apps:
-
-    sudo apt-get install unzip zip
-
-Then install sdkman by giving following command
-
-    curl -s "https://get.sdkman.io" | bash
-
-![](images/install-sdkman.gif)
-
-Reboot you terminal, so basically start ubuntu again.
-
-# Java Installation
-
-Type
-
-    sdk list java
-
-in terminal.
-
-It should display:
-
-![](images/java-versions.png)
-
-Install Java Temurin [latest LTS version](https://www.oracle.com/java/technologies/java-se-support-roadmap.html).
-
-To do this, give command:
-
-    sdk install java 21.0.6-tem  // or similar!
-
-Where 21… is the identifier (Version may vary). Java should be installed now, write
-
-    java -version
-    javac -version
+Example:
 
 ![](images/sdkman-java-install.png)
 
-To see that it works. You may need to reboot your terminal.
+And other tools if needed:
 
-# Kotlin, Gradle and Maven Installation
+```bash
+sdk install kotlin
+sdk install gradle
+sdk install maven
+```
 
-By using SDKMAN it is really simple to install the latest versions of Kotlin, Gradle and Maven if needed:
+---
 
-    sdk install kotlin
-    sdk install gradle
-    sdk install maven
+## 🖥️ Installing Java Development Tools on Windows (WSL2)
+
+### 1️⃣ **Enable WSL**
+
+Run this command in **PowerShell (Admin)**:
+
+```powershell
+wsl --install
+```
+
+If you already have WSL installed, update it:
+
+```powershell
+wsl --update
+```
+
+Restart your system and set **Ubuntu** as the default WSL distribution.
+
+### 2️⃣ **Install SDKMAN in WSL**
+
+Once WSL is running, open your Linux terminal and run:
+
+```bash
+curl -s "https://get.sdkman.io" | bash
+```
+
+Restart your terminal, then install Java, Kotlin, Gradle, and Maven as shown in the macOS section.
+
+---
+
+## 🎯 Manual Installation (Without SDKMAN)
+
+If you prefer **manual installation**, use the links below:
+
+- [Download Java (LTS)](https://adoptium.net/en-GB/)
+- [Download Kotlin](https://kotlinlang.org/docs/command-line.html)
+- [Download Gradle](https://gradle.org/install/)
+- [Download Maven](https://maven.apache.org/download.cgi)
+
+After downloading, ensure they are added to your system **PATH** for easy access. ✅
+
+---
+
+## 🚀 Verifying Installations
+
+Check if the installations were successful by running these commands:
+
+```bash
+java -version
+kotlin -version
+gradle -version
+mvn -version
+```
+
+Each command should return a version number. 🎉
