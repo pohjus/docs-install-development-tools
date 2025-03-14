@@ -86,11 +86,9 @@ Hello, World!
 
 ---
 
-## ⚠️ Test React Installation
+## ⚠️ Test Vite Installation
 
-React apps used to be created with `create-react-app` (CRA). However, **CRA is now largely deprecated (as of 2025).** Instead, **Vite** is recommended for modern React projects.
-
-**To create a new React app with Vite:**
+To create a new React app with Vite:
 
 ```bash
 npm create vite@latest vite-app
@@ -116,24 +114,59 @@ http://localhost:5173/
 
 ![](images/vite-running.png)
 
-If everything is set up correctly, you should see the Vite React template running! 🎉
+## ⚠️ Test VS Code
+
+Test that you are able to install VS Code extensions:
+
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
+![](images/vs-code-extensions.gif)
 
 ---
 
-## 🎯 Verifying Installations
+### ❌ Depricated: CRA
 
-Check your installations by running:
+React apps have been implemented using `create-react-app` tool. **As of 2025, create-react-app (CRA) is largely deprecated** and no longer the recommended tool for new React projects. The React ecosystem has evolved significantly, and there are now more modern, efficient, and actively maintained alternatives.
 
-```bash
-node -v       # Node.js version
-npm -v        # NPM version
-nvm --version # NVM version (if installed)
-```
+But most of "legacy" React projects are built using this tool.
 
-Each command should return a version number. ✅
+If you want to use CRA, then:
 
----
+    npx create-react-app myapp
+    cd myapp
+    npm start
 
-## 🤝 Need Help?
+It should start a browser window:
 
-If you run into issues, refer to official documentation or raise an issue in this repository. Happy coding! 💻✨
+![](images/cra.png)
+
+### 🌟 Advanced Approach: Next.js
+
+Next.js is a React framework that provides server-side rendering (SSR), static site generation (SSG), API routes, and optimized performance features for modern web applications.
+
+It is built and maintained by Vercel and has become the go-to framework for building scalable, production-ready applications with React.
+
+By default, Next.js has better support for SSR.
+
+Next.js has native support for SSR and integrates tightly with React Server Components (RSC), making it the most optimized solution for full-stack React applications. **Next.js support SSR features introduced in React 19**.
+
+In Vite, you will have to do custom setup.
+
+| Feature                           | Next.js (React 19)                     | Vite (React 19)             |
+| --------------------------------- | -------------------------------------- | --------------------------- |
+| **Ease of SSR Setup**             | ✅ Built-in                            | ❌ Manual setup needed      |
+| **React Server Components (RSC)** | ✅ Fully supported                     | ⚠️ Experimental             |
+| **Performance**                   | 🚀 Optimized for production            | ⚡ Super fast dev mode      |
+| **Routing**                       | ✅ File-based routing                  | ❌ Uses React Router        |
+| **Streaming SSR**                 | ✅ Yes                                 | ⚠️ Limited                  |
+| **Edge Function Support**         | ✅ Built-in                            | ❌ Not natively supported   |
+| **Best For**                      | Full-stack apps, SSR, hybrid rendering | SPA, MPA, client-heavy apps |
+
+If you want to try out Next.js:
+
+    npx create-next-app@latest my-next-ap
+
+See how to use Next.js:
+
+![](images/nextjs-running.gif)
