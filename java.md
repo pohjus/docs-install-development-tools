@@ -36,7 +36,7 @@ You can install [Windows subsystem for linux](https://www.windowscentral.com/ins
 
 Then you can open the new terminal and ubuntu:
 
-![](https://paper-attachments.dropboxusercontent.com/s_FD93635640D0A182BFE5C4E8CB3CC57B524B6F5FB5561D6C8E644FEACBE659D3_1645172659368_2022-02-18+10.23.58.gif)
+![](images/wsl.gif)
 
 Install zip and unzip apps:
 
@@ -46,7 +46,7 @@ Then install sdkman by giving following command
 
     curl -s "https://get.sdkman.io" | bash
 
-![](https://paper-attachments.dropboxusercontent.com/s_FD93635640D0A182BFE5C4E8CB3CC57B524B6F5FB5561D6C8E644FEACBE659D3_1645172983047_2022-02-18+10.28.05.gif)
+![](images/install-sdkman.gif)
 
 Reboot you terminal, so basically start ubuntu again.
 
@@ -60,65 +60,27 @@ in terminal.
 
 It should display:
 
-![](https://paper-attachments.dropboxusercontent.com/s_FD93635640D0A182BFE5C4E8CB3CC57B524B6F5FB5561D6C8E644FEACBE659D3_1645173074838_Screenshot+2022-02-18+at+10.31.10.png)
+![](images/java-versions.png)
 
-Install Java Temurin 21.x.
-
-![](https://paper-attachments.dropboxusercontent.com/s_FD93635640D0A182BFE5C4E8CB3CC57B524B6F5FB5561D6C8E644FEACBE659D3_1645173117641_Screenshot+2022-02-18+at+10.31.54.png)
+Install Java Temurin [latest LTS version](https://www.oracle.com/java/technologies/java-se-support-roadmap.html).
 
 To do this, give command:
 
-    sdk install java 21...  // or similar!
+    sdk install java 21.0.6-tem  // or similar!
 
-Where 21… is the identifier (Version may vary)
-
-![](https://paper-attachments.dropboxusercontent.com/s_FD93635640D0A182BFE5C4E8CB3CC57B524B6F5FB5561D6C8E644FEACBE659D3_1645173200172_Screenshot+2022-02-18+at+10.33.17.png)
-
-Java should be installed now:
-
-![](https://paper-attachments.dropboxusercontent.com/s_FD93635640D0A182BFE5C4E8CB3CC57B524B6F5FB5561D6C8E644FEACBE659D3_1645173278116_Screenshot+2022-02-18+at+10.34.15.png)
-
-Just write
+Where 21… is the identifier (Version may vary). Java should be installed now, write
 
     java -version
     javac -version
 
+![](images/sdkman-java-install.png)
+
 To see that it works. You may need to reboot your terminal.
 
-# Kotlin Installation
+# Kotlin, Gradle and Maven Installation
 
-Now install the latest version of kotlin. Use
-
-    sdk list kotlin
-
-and
+By using SDKMAN it is really simple to install the latest versions of Kotlin, Gradle and Maven if needed:
 
     sdk install kotlin
-
-![](https://paper-attachments.dropboxusercontent.com/s_FD93635640D0A182BFE5C4E8CB3CC57B524B6F5FB5561D6C8E644FEACBE659D3_1645173430865_2022-02-18+10.35.36.gif)
-
-# Gradle Installation
-
-Now install the latest version of gradle. Use
-
-    sdk list gradle
-
-and install most recent gradle
-
     sdk install gradle
-
-![](https://paper-attachments.dropboxusercontent.com/s_FD93635640D0A182BFE5C4E8CB3CC57B524B6F5FB5561D6C8E644FEACBE659D3_1645173548702_2022-02-18+10.37.49.gif)
-
-# Maven Installation
-
-Now install the latest version of gradle. Use
-
-    sdk list maven
-
-and install most recent maven
-
     sdk install maven
-
-# Git?
-
-If you cannot get git working in WSL2, follow these steps for [authentication](https://paper.dropbox.com/doc/GitHub-and-keys--CHZYK~zpG0fSqoFTLryyR4sSAg-ckErqW0Hu3PGe4x4J0lL9).
