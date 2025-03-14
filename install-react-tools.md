@@ -1,122 +1,139 @@
-# React Tools
+# ⚛️ React Development Tools Installation Guide
 
-Install
+Welcome to the **React Development Tools Installation Guide**! 🚀 This guide will help you install and verify essential tools for React development, including **VS Code, Node.js, and Vite**.
 
-- [VS Code](https://code.visualstudio.com)
-- [Node.js](https://nodejs.org/en) (LTS Version)
+---
 
-Test that tools work! - see below!
+## ✅ Required Tools
 
-## ⚠️ Test Node.js
+You'll need the following tools installed:
 
-Create a text file called `index.js` with the content of:
+- [VS Code](https://code.visualstudio.com) - Code editor with great React support
+- [Node.js (LTS Version)](https://nodejs.org/en) - JavaScript runtime for running React apps
+- [Vite](https://vitejs.dev/) - Fast, modern build tool for React apps
 
-    console.log("hello world")
+Ensure you install the **LTS (Long-Term Support) version** of Node.js for stability. 🔄
 
-Run the app using node (in command line)
+---
 
-    node index.js
+## 🌍 Managing Node Versions with NVM
 
-It should output
+**NVM (Node Version Manager)** is the recommended way to install and manage multiple versions of Node.js but totally optional! You can install Node.js directly from [Node web-site](https://nodejs.org/en).
 
-    hello world
+NVM ensures compatibility across different projects.
 
-Example workflow in macOS terminal:
+### 🖥️ Install NVM
+
+### **macOS & Linux**
+
+Run the following command:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash
+```
+
+Restart your terminal, then verify NVM installation:
+
+```bash
+nvm --version
+```
+
+To install the **latest LTS version of Node.js**:
+
+```bash
+nvm install --lts
+```
+
+To switch between versions:
+
+```bash
+nvm use <version>
+```
+
+### **Windows**
+
+For Windows, install **nvm-windows** from the [official GitHub page](https://github.com/coreybutler/nvm-windows/releases). Restart your terminal after installation.
+
+---
+
+## ⚠️ Test Node.js Installation
+
+Create a text file called **`index.js`** with the following content:
+
+```javascript
+console.log("Hello, World!");
+```
+
+Run the script using Node.js:
+
+```bash
+node index.js
+```
+
+You should see this output:
+
+```
+Hello, World!
+```
+
+**Example in macOS Terminal:**
 
 ![](images/node.gif)
 
-Example in Windows environment with VS Code and MS DOS:
+**Example in Windows (VS Code & Command Prompt):**
 
 ![](images/node-windows.png)
 
-## ⚠️ Test React
+---
 
-React apps have been implemented using `create-react-app` tool. **As of 2025, create-react-app (CRA) is largely deprecated** and no longer the recommended tool for new React projects. The React ecosystem has evolved significantly, and there are now more modern, efficient, and actively maintained alternatives.
+## ⚠️ Test React Installation
 
-But most of "legacy" React projects are built using this tool.
+React apps used to be created with `create-react-app` (CRA). However, **CRA is now largely deprecated (as of 2025).** Instead, **Vite** is recommended for modern React projects.
 
-In React training you can choose your tool of choice, but all assignments are tested with [`vite`](https://vite.dev) and all demonstrations are also done with this tool.
+**To create a new React app with Vite:**
 
-So you can for example use
+```bash
+npm create vite@latest vite-app
+```
 
-- CRA
-- Vite
-- Next.js
-
-But as said, Vite is recommendation.
-
-### Vite
-
-Test that vite works:
-
-    npm create vite@latest vite-app
-
-Choose
-
-- React
-- JavaScript + SWC
-
-And then
-
-    cd vite-app
-    npm install
-    npm run dev
-
-See how to use Vite:
+Choose React, JavaScript + SWC:
 
 ![](images/vite.gif)
 
-And then you can open `http://localhost:5173/` in browser:
+Then:
+
+```bash
+cd vite-app
+npm install
+npm run dev
+```
+
+This will start a local development server. Open your browser and visit:
+
+```
+http://localhost:5173/
+```
 
 ![](images/vite-running.png)
 
-### CRA
+If everything is set up correctly, you should see the Vite React template running! 🎉
 
-If you want to use CRA, then test that it works:
+---
 
-    npx create-react-app myapp
-    cd myapp
-    npm start
+## 🎯 Verifying Installations
 
-It should start a browser window:
+Check your installations by running:
 
-![](images/cra.png)
+```bash
+node -v       # Node.js version
+npm -v        # NPM version
+nvm --version # NVM version (if installed)
+```
 
-### Next.js?
+Each command should return a version number. ✅
 
-Next.js is a React framework that provides server-side rendering (SSR), static site generation (SSG), API routes, and optimized performance features for modern web applications.
+---
 
-It is built and maintained by Vercel and has become the go-to framework for building scalable, production-ready applications with React.
+## 🤝 Need Help?
 
-By default, Next.js has better support for SSR.
-
-Next.js has native support for SSR and integrates tightly with React Server Components (RSC), making it the most optimized solution for full-stack React applications. **Next.js support SSR features introduced in React 19**.
-
-In Vite, you will have to do custom setup.
-
-| Feature                           | Next.js (React 19)                     | Vite (React 19)             |
-| --------------------------------- | -------------------------------------- | --------------------------- |
-| **Ease of SSR Setup**             | ✅ Built-in                            | ❌ Manual setup needed      |
-| **React Server Components (RSC)** | ✅ Fully supported                     | ⚠️ Experimental             |
-| **Performance**                   | 🚀 Optimized for production            | ⚡ Super fast dev mode      |
-| **Routing**                       | ✅ File-based routing                  | ❌ Uses React Router        |
-| **Streaming SSR**                 | ✅ Yes                                 | ⚠️ Limited                  |
-| **Edge Function Support**         | ✅ Built-in                            | ❌ Not natively supported   |
-| **Best For**                      | Full-stack apps, SSR, hybrid rendering | SPA, MPA, client-heavy apps |
-
-If you want to try out Next.js:
-
-    npx create-next-app@latest my-next-ap
-
-See how to use Next.js:
-
-![](images/nextjs-running.gif)
-
-## ⚠️ Test VS Code
-
-Test that you are able to install VS Code extensions:
-
-- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-
-![](images/vs-code-extensions.gif)
+If you run into issues, refer to official documentation or raise an issue in this repository. Happy coding! 💻✨
