@@ -8,9 +8,14 @@ Welcome to the **React Development Tools Installation Guide**! 🚀 This guide w
 
 You'll need the following tools installed:
 
-- [VS Code](https://code.visualstudio.com) - Code editor with great React support
-- [Node.js (LTS Version)](https://nodejs.org/en) - JavaScript runtime for running React apps
-- [Vite](https://vitejs.dev/) - Fast, modern build tool for React apps
+- [**VS Code**](https://code.visualstudio.com)
+  - Code editor with great React support
+- [**Node.js (LTS Version)**](https://nodejs.org/en)
+  - JavaScript runtime for running React apps
+- [**Vite**](https://vitejs.dev/)
+  - Fast, modern build tool for React apps
+- _Optional_: [**Git**](https://git-scm.com/downloads) + [**GitHub account**](https://github.com)
+  - if one wants to deploy apps to cloud
 
 Ensure you install the **LTS (Long-Term Support) version** of Node.js for stability.
 
