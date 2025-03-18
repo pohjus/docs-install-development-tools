@@ -4,7 +4,7 @@ Welcome to the **React Development Tools Installation Guide**! 🚀 This guide w
 
 ---
 
-## ✅ Required Tools
+## ✅ Quick Start
 
 You'll need the following tools installed:
 
@@ -12,47 +12,9 @@ You'll need the following tools installed:
 - [Node.js (LTS Version)](https://nodejs.org/en) - JavaScript runtime for running React apps
 - [Vite](https://vitejs.dev/) - Fast, modern build tool for React apps
 
-Ensure you install the **LTS (Long-Term Support) version** of Node.js for stability. 🔄
+Ensure you install the **LTS (Long-Term Support) version** of Node.js for stability.
 
----
-
-## 🌍 Managing Node Versions with NVM
-
-**NVM (Node Version Manager)** is the recommended way to install and manage multiple versions of Node.js but totally optional! You can install Node.js directly from [Node web-site](https://nodejs.org/en).
-
-NVM ensures compatibility across different projects.
-
-### 🖥️ Install NVM
-
-### **macOS & Linux**
-
-Run the following command:
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash
-```
-
-Restart your terminal, then verify NVM installation:
-
-```bash
-nvm --version
-```
-
-To install the **latest LTS version of Node.js**:
-
-```bash
-nvm install --lts
-```
-
-To switch between versions:
-
-```bash
-nvm use <version>
-```
-
-### **Windows**
-
-For Windows, install **nvm-windows** from the [official GitHub page](https://github.com/coreybutler/nvm-windows/releases). Restart your terminal after installation.
+Test that Node, Vite and VS Code works, see below!
 
 ---
 
@@ -170,3 +132,41 @@ If you want to try out Next.js:
 See how to use Next.js:
 
 ![](images/nextjs-running.gif)
+
+## 🌍 (Optional) Managing Node Versions with NVM
+
+**NVM (Node Version Manager)** is the recommended way to install and manage multiple versions of Node.js but totally optional! You can install Node.js directly from [Node web-site](https://nodejs.org/en).
+
+NVM ensures compatibility across different projects.
+
+### 🖥️ Install NVM
+
+### **macOS & Linux**
+
+Run the following command:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash
+```
+
+Restart your terminal, then verify NVM installation:
+
+```bash
+nvm --version
+```
+
+To install the **latest LTS version of Node.js**:
+
+```bash
+nvm install --lts
+```
+
+To switch between versions:
+
+```bash
+nvm use <version>
+```
+
+### **Windows**
+
+For Windows, install **nvm-windows** from the [official GitHub page](https://github.com/coreybutler/nvm-windows/releases). Restart your terminal after installation.
