@@ -1,7 +1,16 @@
 # 📌 Best Practices for Asking Programming Questions on Slack
+
 > Helping you get faster, better answers by asking smart questions.
 
 To facilitate effective and efficient communication on Slack, especially regarding programming questions, follow these guidelines when seeking assistance.
+
+## Good Example of Slack usage:
+
+![](images/good-example-slack.png)
+
+## Bad Example of Slack usage:
+
+![](images/bad-example-slack.png)
 
 ---
 
@@ -51,6 +60,7 @@ To facilitate effective and efficient communication on Slack, especially regardi
 - [ ] Did I explain what I'm trying to do?
 - [ ] Did I include error messages and commands?
 - [ ] Did I link to my code or GitHub repo?
+- [ ] Did I link to the assignment?
 - [ ] Did I show what I've tried already?
 - [ ] Did I format everything clearly using code blocks?
 - [ ] Did I include commands how to reproduce the error?
